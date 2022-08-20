@@ -32,6 +32,7 @@ public class EstudiosServicio {
         existeEstudio.setLugar(estudio.getLugar());
         existeEstudio.setIni_est(estudio.getIni_est());
         existeEstudio.setFin_est(estudio.getFin_est());
+        existeEstudio.setImagen(estudio.getImagen());
         
         return estuRepo.save(existeEstudio);
         

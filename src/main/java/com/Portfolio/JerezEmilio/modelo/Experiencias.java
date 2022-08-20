@@ -25,6 +25,7 @@ public class Experiencias {
     private String tarea;
     private String fec_ini;
     private String fec_fin;
+    private String imagen;
     
     @ManyToOne(cascade=CascadeType.PERSIST)
     @JoinColumn(name="id_persona")
@@ -33,15 +34,18 @@ public class Experiencias {
     public Experiencias() {
     }
 
-    public Experiencias(Long id, String empresa, String puesto, String tarea, String fec_ini, String fec_fin, Persona persona) {
+    public Experiencias(Long id, String empresa, String puesto, String tarea, String fec_ini, String fec_fin, String imagen, Persona persona) {
         this.id = id;
         this.empresa = empresa;
         this.puesto = puesto;
         this.tarea = tarea;
         this.fec_ini = fec_ini;
         this.fec_fin = fec_fin;
+        this.imagen = imagen;
         this.persona = persona;
     }
+
+    
 
     
     
