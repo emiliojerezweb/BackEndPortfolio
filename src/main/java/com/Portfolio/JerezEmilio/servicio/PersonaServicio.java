@@ -2,16 +2,16 @@
 package com.Portfolio.JerezEmilio.servicio;
 
 import com.Portfolio.JerezEmilio.modelo.Persona;
-import com.Portfolio.JerezEmilio.repositorio.RepoPersona;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.Portfolio.JerezEmilio.repositorio.PersonaRepositorio;
 
 @Service
 public class PersonaServicio {
     
     @Autowired
-    private RepoPersona repoperso;
+    private PersonaRepositorio repoperso;
     
     public Persona guardarPersona(Persona perso){
         return repoperso.save(perso);
@@ -35,6 +35,8 @@ public class PersonaServicio {
         existePersona.setNombre(perso.getNombre());
         existePersona.setApellido(perso.getApellido());
         existePersona.setDireccion(perso.getDireccion());
+        existePersona.setEmail(perso.getEmail());
+        existePersona.setDescripcion(perso.getDescripcion());
         
         return repoperso.save(existePersona);
     }
