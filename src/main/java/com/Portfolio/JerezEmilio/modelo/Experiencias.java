@@ -1,14 +1,11 @@
 
 package com.Portfolio.JerezEmilio.modelo;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,14 +24,10 @@ public class Experiencias {
     private String fec_fin;
     private String imagen;
     
-    @ManyToOne(cascade=CascadeType.PERSIST)
-    @JoinColumn(name="id_persona")
-    private Persona persona;
-
     public Experiencias() {
     }
 
-    public Experiencias(Long id, String empresa, String puesto, String tarea, String fec_ini, String fec_fin, String imagen, Persona persona) {
+    public Experiencias(Long id, String empresa, String puesto, String tarea, String fec_ini, String fec_fin, String imagen) {
         this.id = id;
         this.empresa = empresa;
         this.puesto = puesto;
@@ -42,8 +35,12 @@ public class Experiencias {
         this.fec_ini = fec_ini;
         this.fec_fin = fec_fin;
         this.imagen = imagen;
-        this.persona = persona;
     }
+
+
+
+    
+  
 
     
 
