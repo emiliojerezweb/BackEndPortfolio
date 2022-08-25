@@ -27,15 +27,7 @@ public class EstudiosServicio {
     
     public Estudios actualizarEstudio(Estudios estudio){
         
-        Estudios existeEstudio = verEstudioId(estudio.getId());
-        existeEstudio.setTitulo(estudio.getTitulo());
-        existeEstudio.setLugar(estudio.getLugar());
-        existeEstudio.setIni_est(estudio.getIni_est());
-        existeEstudio.setFin_est(estudio.getFin_est());
-        existeEstudio.setImagen(estudio.getImagen());
-        
-        return estuRepo.save(existeEstudio);
-        
+        return estuRepo.save(estudio);
     }
     
     public void borrarEstudioId(Long id){

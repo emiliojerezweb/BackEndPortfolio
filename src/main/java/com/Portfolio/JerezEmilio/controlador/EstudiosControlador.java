@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200/")
 public class EstudiosControlador {
     
     @Autowired
@@ -38,6 +38,7 @@ public class EstudiosControlador {
     
     @PutMapping("/estudio/editar")
     public Estudios editarEstudio(@RequestBody Estudios estudio){
+        estudio.setId(estudio.getId());
         return estuServ.actualizarEstudio(estudio);
     }
     

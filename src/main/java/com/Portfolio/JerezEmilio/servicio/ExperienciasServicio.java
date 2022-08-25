@@ -27,14 +27,7 @@ public class ExperienciasServicio {
     
     public Experiencias actualizarExperiencia(Experiencias exp){
         
-        Experiencias existeExp = verExperienciaId(exp.getId());
-        existeExp.setEmpresa(exp.getEmpresa());
-        existeExp.setPuesto(exp.getPuesto());
-        existeExp.setTarea(exp.getTarea());
-        existeExp.setFec_ini(exp.getFec_ini());
-        existeExp.setFec_fin(exp.getFec_fin());
-        
-        return expRepo.save(existeExp);
+        return expRepo.save(exp);
         
     }
     

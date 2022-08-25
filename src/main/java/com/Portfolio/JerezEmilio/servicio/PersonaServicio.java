@@ -31,13 +31,7 @@ public class PersonaServicio {
     }
     
     public Persona actualizarPersona(Persona perso){
-        Persona existePersona = repoperso.findById(perso.getId()).orElse(null);
-        existePersona.setNombre(perso.getNombre());
-        existePersona.setApellido(perso.getApellido());
-        existePersona.setDireccion(perso.getDireccion());
-        existePersona.setEmail(perso.getEmail());
-        existePersona.setDescripcion(perso.getDescripcion());
         
-        return repoperso.save(existePersona);
+        return repoperso.save(perso);
     }
 }

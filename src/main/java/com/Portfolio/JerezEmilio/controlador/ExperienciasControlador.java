@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
+@CrossOrigin(origins="http://localhost:4200/")
 public class ExperienciasControlador {
     
     @Autowired
@@ -38,6 +38,7 @@ public class ExperienciasControlador {
     
     @PutMapping("exp/editar")
     public Experiencias editarExperiencia(@RequestBody Experiencias experiencia){
+        experiencia.setId(experiencia.getId());
         return expServ.actualizarExperiencia(experiencia);
     }
     
