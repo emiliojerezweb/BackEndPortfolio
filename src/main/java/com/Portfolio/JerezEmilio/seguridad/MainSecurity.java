@@ -44,7 +44,6 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
     }
     
     
-    
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {

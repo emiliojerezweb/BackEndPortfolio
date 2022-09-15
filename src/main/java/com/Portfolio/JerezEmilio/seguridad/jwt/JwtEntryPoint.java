@@ -21,14 +21,23 @@ public class JwtEntryPoint implements AuthenticationEntryPoint {
 
     //logger para ver cual metodo da error
     private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
-            
+
+    /**
+     *
+     * @param request
+     * @param response
+     * @param authException
+     * @throws IOException
+     * @throws ServletException
+     */
+    
     @Override
     public void commence(HttpServletRequest request, 
-                            HttpServletResponse response, 
-                            AuthenticationException authException) throws IOException, ServletException {
-       
+            HttpServletResponse response, 
+            AuthenticationException authException) throws IOException, ServletException {
+        
         logger.error("Fallo commence");
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "No autorizado");
     }
-    
+   
 }
