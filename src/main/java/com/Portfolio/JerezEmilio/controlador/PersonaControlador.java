@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200/")
+@CrossOrigin(origins="http://localhost:4200")
 public class PersonaControlador {
     
     @Autowired
@@ -35,8 +35,6 @@ public class PersonaControlador {
     public List<Persona> verTodasPersonas(){
         return persoServ.verPersona();
     }
-    
-    
     
     @DeleteMapping("/persona/borrar/{id}")
     public void borrarPersona(@PathVariable Long id){

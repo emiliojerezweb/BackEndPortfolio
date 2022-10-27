@@ -37,15 +37,6 @@ public class Persona {
     }
 
     
-
-
-
- 
-  
-
-  
-    
-    
 }
 
 

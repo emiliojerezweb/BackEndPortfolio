@@ -6,8 +6,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.Portfolio.JerezEmilio.repositorio.PersonaRepositorio;
+import org.springframework.transaction.annotation.Transactional;
+
 
 @Service
+@Transactional
 public class PersonaServicio {
     
     @Autowired
@@ -15,7 +18,6 @@ public class PersonaServicio {
     
     public Persona guardarPersona(Persona perso){
         return repoperso.save(perso);
-       
     }
     
     public List<Persona> verPersona(){
@@ -30,8 +32,7 @@ public class PersonaServicio {
         repoperso.deleteById(id);
     }
     
-    public Persona actualizarPersona(Persona perso){
-        
+    public Persona actualizarPersona(Persona perso){   
         return repoperso.save(perso);
     }
 }
